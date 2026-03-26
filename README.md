@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# 🛍️ Redux Shopping Cart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, feature-rich shopping cart application built with **React**, **Redux Toolkit**, and **Material UI**. This project demonstrates advanced state management, responsive design, and a smooth user experience with real-time cart updates, discounts, and local storage persistence.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Redux Toolkit** for efficient state management
+- **Add to Cart** with quantity selector (+/- buttons)
+- **20% Discount** automatically applied when buying 2 or more items
+- **Buy Now** option (direct checkout modal)
+- **Search Bar** – filter products by name or description
+- **Auto-scrolling Offer Marquee** for products on sale
+- **Glassmorphism UI** with smooth animations and hover effects
+- **Local Storage** – cart persists across page reloads
+- **Loading Skeletons** for better perceived performance
+- **Toast Notifications** (Snackbar) for add/remove actions
+- **Responsive Design** – works on desktop, tablet, and mobile
 
-### `npm start`
+## 🛠️ Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 18** – UI library
+- **Redux Toolkit** – state management
+- **Material UI (MUI)** – component library and styling
+- **React Redux** – connect React with Redux
+- **LocalStorage** – persist cart data
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Installation
 
-### `npm test`
+Clone the repository and install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/rudrajit01/24BCY70262-7b-Rudrajit-Pramanik.git
+cd 24BCY70262-7b-Rudrajit-Pramanik
+npm install
+🚀 Usage
+Start the development server:
 
-### `npm run build`
+bash
+npm start
+Open http://localhost:3000 in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Browse products, adjust quantity, and add to cart.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Use the search bar to find specific items.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Cart shows subtotal, discount, and total price.
 
-### `npm run eject`
+Click Buy Now to open the checkout summary modal.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Cart data remains after refreshing the page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📂 Project Structure
+text
+src/
+├── app/
+│   └── store.js                 # Redux store configuration
+├── components/
+│   ├── Cart.js                  # Shopping cart component
+│   ├── CheckoutModal.js         # Checkout summary modal
+│   ├── OfferMarquee.js          # Auto-scrolling offer banner
+│   └── ProductList.js           # Product grid with filters
+├── data/
+│   └── products.js              # Product data (name, price, image, etc.)
+├── features/
+│   └── cart/
+│       └── cartSlice.js         # Redux slice for cart actions
+├── App.js                       # Main app with header, search bar, layout
+├── index.css                    # Global styles (animated gradient)
+└── index.js                     # Entry point with Redux provider
+🔧 Redux State Management
+cartSlice.js contains reducers: addItem, removeItem, updateQuantity, clearCart.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+addItem now accepts a quantity parameter, allowing bulk addition.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Store subscribes to changes and saves cart to localStorage.
 
-## Learn More
+🎨 Customization
+Colors & Themes: Modify createTheme in index.js or App.js.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Products: Edit src/data/products.js to add/change products.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Discount Logic: Adjust the 20% rule in Cart.js and CheckoutModal.js.
 
-### Code Splitting
+📸 Screenshots
+(Add your own screenshots here for better visibility)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🤝 Contributing
+This is a personal project, but suggestions and feedback are welcome! Feel free to fork and improve.
 
-### Analyzing the Bundle Size
+📄 License
+This project is open-source and available under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👨‍💻 Author
+Rudrajit Pramanik – GitHub
